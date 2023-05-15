@@ -12,7 +12,7 @@ jobs:
     - name: Login to Azure
       uses: azure/login@v1.4.6
       with:
-        creds: '{clientid":"${{ secrets.CLIENT_ID }}","clientsecret":"${{ secrets.CLIENT_SECRET }}","subscriptionid":"${{ secrets.SUBSCRIPTION_ID }}","tenantid":"${{ secrets.TENANT_ID }}'
+        creds: '{"clientId":"${{ secrets.client_id }}","clientSecret":"${{ secrets.client_secret }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
     - name: Deploy ARM Template
       uses: azure/arm-deploy@v1.0.8
       with:
@@ -20,4 +20,3 @@ jobs:
         resource-group: 'monday'
         template: 'ArmTemplate/container-webapp-template.json'
         deploymentMode: Incremental
-

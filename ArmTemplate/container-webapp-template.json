@@ -1,46 +1,46 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
         "webAppName": {
-            "defaultValue": "<prefix>devops-dev",
-            "type": "String"
+            "defaultValue": "jusjrdevops-dev",
+            "type": "string"
         },
         "hostingPlanName": {
-            "defaultValue": "<prefix>devops-asp",
-            "type": "String"
+            "defaultValue": "jusjrdevops-asp",
+            "type": "string"
         },
         "appInsightsLocation": {
             "defaultValue": "South Central US",
-            "type": "String"
+            "type": "string"
         },
         "appInsightsName": {
-            "defaultValue": "<prefix>devops-ai",
-            "type": "String"
+            "defaultValue": "jusjrdevops-ai",
+            "type": "string"
         },        
         "sku": {
             "defaultValue": "S1",
-            "type": "String"
+            "type": "string"
         },
         "registryName": {
-            "defaultValue": "<prefix>devopsreg",
-            "type": "String"
+            "defaultValue": "jusjrdevopsreg",
+            "type": "string"
         },
         "imageName": {
-            "defaultValue": "<prefix>devopsimage",
-            "type":"String"
+            "defaultValue": "jusjrdevopsimage",
+            "type":"string"
         },
         "registryLocation": {
             "defaultValue": "South Central US",
-            "type": "String"
+            "type": "string"
         },
         "registrySku": {
             "defaultValue": "Standard",
-            "type": "String"
+            "type": "string"
         },
         "startupCommand": {
             "defaultValue": "",
-            "type": "String"
+            "type": "string"
         }
     },
     "resources": [
@@ -97,7 +97,7 @@
             "apiVersion": "2017-10-01",
             "location": "[parameters('registryLocation')]",
             "properties": {
-                "adminUserEnabled": "true"
+                "adminUserEnabled": true
             }
         },
         {

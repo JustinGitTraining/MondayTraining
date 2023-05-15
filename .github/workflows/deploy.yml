@@ -17,6 +17,6 @@ jobs:
       uses: azure/arm-deploy@v1.0.8
       with:
         scope: resourcegroup
-        resource-group: 'monday'
+        resourceGroupName: 'Monday'
         template: 'ArmTemplate/container-webapp-template.json'
         deploymentMode: Incremental

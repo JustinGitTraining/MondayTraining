@@ -3,7 +3,7 @@ name: Deploy ARM Template
 on: workflow_dispatch
 
 env:
-  TARGET_ENV: 'jusjrdevops-test'
+  TARGET_ENV: 'jusjrdevops-prod'
 
 jobs:
   deploy:
